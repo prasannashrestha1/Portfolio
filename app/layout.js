@@ -28,20 +28,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${bricolage.className} ${ovo.className} antialiased`}>
+      <body
+        className={`${bricolage.className} ${ovo.className} antialiased leading-8 overflow-x-hidden`}
+      >
         {children}
       </body>
     </html>
   );
 }
-// export default function RootLayout({ children }) {
-//   return (
-//     <html lang="en">
-//       <body
-//         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-//       >
-//         {children}
-//       </body>
-//     </html>
-//   );
-// }
