@@ -12,3 +12,12 @@ body {
   transition: ease-in-out;
   transition-duration: 500ms;
 }
+
+.icons {
+  @apply p-2 text-gray-500 rounded-full border  border-gray-300 hover:-translate-x-1 cursor-pointer transition-all ease-in duration-300
+}
+
+
+.card {
+  @apply p-6 md:p-8 m-2 border shadow-sm hover:shadow-black hover:bg-lightHover dark:hover:bg-darkHover/50 hover:-translate-y-1.5 dark:border-white dark:hover:shadow-white/50  drop-shadow-xl text-start border-slate-300 rounded-2xl flex flex-col gap-4 h-full cursor-pointer transition-all ease-in-out duration-500
+}

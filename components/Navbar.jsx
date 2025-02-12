@@ -2,7 +2,7 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useRef } from "react";
 
-const Navbar = () => {
+const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const sideMenuRef = useRef();
 
   const openMenu = () => {
@@ -13,16 +13,13 @@ const Navbar = () => {
   };
   return (
     <>
-      {/* <div className="fixed top-0 right-0 w-11/12 z-10 translate-y-[-80%]">
-        <Image src={assets.header_bg_color} alt="" className="w-full" />
-      </div> */}
-      <nav className="w-full flex fixed px-5 lg:px-8 xl:px-[8%] py-4 justify-between bg-white items-center z-9999">
+      <nav className=" w-full flex fixed px-5 lg:px-8 xl:px-[8%] py-4 justify-between bg-white dark:bg-darkTheme dark:shadow-white/20 items-center z-9999">
         <a href="#top" className="flex items-end gap-2">
           <h1 className="text-2xl">Prasanna</h1>
           <div className="w-2 h-2 mb-3 bg-red-500 rounded-full"></div>
         </a>
 
-        <ul className=" gap-6 hidden shadow-md bg-white rounded-full  bg-opacity-50 md:flex px-12 py-3">
+        <ul className=" gap-6 hidden shadow-md bg-white rounded-full bg-opacity-50 dark:border dark:border-white/50 md:flex px-12 py-3">
           <li>
             <a className="font-Bri cursor-pointer" href="#top">
               Home
@@ -50,9 +47,13 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="flex gap-3 items-center">
-          <button>
+          <button onClick={() => setIsDarkMode(!isDarkMode)}>
             {" "}
-            <Image src={assets.moon_icon} alt="image" className="w-6" />
+            <Image
+              src={isDarkMode ? assets.sun_icon : assets.moon_icon}
+              alt="image"
+              className="w-6"
+            />
           </button>
           <a
             href="#contact"
@@ -62,25 +63,32 @@ const Navbar = () => {
             <Image
               className="w-3 h-3"
               alt="image"
-              src={assets.arrow_icon}
+              src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
             ></Image>
           </a>
           <button onClick={openMenu} className="block md:hidden ml-2">
             {" "}
-            <Image src={assets.menu_black} alt="image" className="w-6" />
+            <Image
+              src={isDarkMode ? assets.menu_white : assets.menu_black}
+              alt="image"
+              className="w-6"
+            />
           </button>
         </div>
 
         {/* mobile menu */}
         <ul
           ref={sideMenuRef}
-          className=" fixed text-xl top-0 -right-64 gap-6 bg-red-300 h-screen flex flex-col shadow-md w-64 transition duration-500 md:hidden px-12 py-12"
+          className=" fixed text-xl top-0 z-999 -right-64 gap-6 bg-red-300 dark:bg-darkHover z-200 h-screen flex flex-col shadow-md w-64 transition duration-500 md:hidden px-12 py-12"
         >
           <div
             onClick={closeMenu}
-            className="cursor-pointer absolute top-7 right-7 w-7 h-7 p-2 rounded-full bg-black/10"
+            className="cursor-pointer absolute top-7 right-7 w-7 h-7 p-2 rounded-full bg-black/10 dark:bg-white/10"
           >
-            <Image src={assets.close_black} alt="image" />
+            <Image
+              src={isDarkMode ? assets.close_white : assets.close_black}
+              alt="image"
+            />
           </div>
           <li>
             <a
