@@ -6,7 +6,14 @@ const Headers = () => {
   return (
     <section className="w-full text-center flex flex-col h-screen px-5 lg:px-8 xl:px-[8%] py-4 gap-6 md:gap-7s justify-center items-center z-50">
       <div className="flex flex-col items-center gap-4">
-        <Image src={assets.profile_img} className="w-30" alt="" />
+        <div className="border-4 border-red-400 rounded-full shadow-xl">
+          <Image
+            src={assets.prasanna}
+            className="w-[250px] sm:w-[300px]"
+            alt=""
+          />
+        </div>
+
         <div className="flex gap-2 items-center text-lg md:text-xl">
           <p>Hi! I'm Prasanna Shrestha</p>
           <Image src={assets.hand_icon} alt="" className="w-4 h-4" />
@@ -22,7 +29,7 @@ const Headers = () => {
           technical skills.
         </h3>
       </div>
-      <div className="flex gap-3">
+      <div className="min-[475px]:flex-row flex-col max-[475px]:w-full flex gap-3">
         <a
           href="/sample-resume.pdf"
           download
