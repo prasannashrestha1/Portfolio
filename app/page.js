@@ -1,10 +1,12 @@
 "use client";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 import Headers from "@/components/Headers";
 import Mywork from "@/components/Mywork";
 import Navbar from "@/components/Navbar";
 import Services from "@/components/Services";
+import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       <Services />
       <Mywork />
       <Contact />
+      <Footer />
+      <ToastContainer />
     </div>
   );
 }
