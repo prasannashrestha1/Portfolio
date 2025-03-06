@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { toast } from "react-toastify";
 import { motion } from "motion/react";
+import Footer from "./Footer";
 
-const Contact = () => {
+const Contact = ({ isDarkMode }) => {
   const [result, setResult] = useState("Submit Now");
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -36,7 +37,7 @@ const Contact = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="contact"
-      className="w-full min-h-screen text-center flex flex-col px-5 lg:px-8 xl:px-[8%] py-[20px] sm:py-[40px] md:py-[80px] gap-8 md:gap-12 items-center bg-[url(/footer-bg-color.png)] dark:bg-none bg-no-repeat bg-center z-10 scroll-mt-20"
+      className=" snap-start w-full min-h-screen text-center flex flex-col px-5 lg:px-8 xl:px-[8%] py-[20px] sm:py-[40px] md:py-[80px] gap-8 md:gap-12 items-center bg-[url(/footer-bg-color.png)] dark:bg-none bg-no-repeat bg-center z-10 scroll-mt-20"
     >
       <div className="flex flex-col gap-8 flex-1 max-w-[800px]">
         <div className="flex flex-col gap-4">

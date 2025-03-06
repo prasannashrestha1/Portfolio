@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 const Headers = () => {
   return (
-    <section className="w-full text-center flex flex-col h-screen px-5 lg:px-8 xl:px-[8%] py-4 gap-6 md:gap-7s justify-center items-center z-50">
+    <section className="snap-start w-full text-center flex flex-col h-screen px-5 lg:px-8 xl:px-[8%] py-4 gap-6 md:gap-7s justify-center items-center z-50">
       <div className="flex flex-col items-center gap-4">
         <motion.div
           initial={{ scale: 0 }}

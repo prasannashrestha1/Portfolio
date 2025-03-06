@@ -10,7 +10,7 @@ export default {
       colors: {
         lightHover: "#fcf4ff",
         darkHover: "#2a004a",
-        darkTheme: "#11001f",
+        darkTheme: "#151515",
       },
       fontFamily: {
         Bricolage_Grotesque: ["Bricolage_Grotesque", "serif"],

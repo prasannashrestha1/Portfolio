@@ -10,7 +10,7 @@ const About = ({ isDarkMode }) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="about"
-      className="w-full min-h-screen text-center flex flex-col px-5 lg:px-8 xl:px-[8%] py-[20px] sm:py-[40px] md:py-[80px] gap-8 md:gap-12  items-center  scroll-mt-20"
+      className="snap-start w-full min-h-screen text-center dark:bg-[#1B1B1B] flex flex-col px-5 lg:px-8 xl:px-[8%] py-[20px] sm:py-[40px] md:py-[80px] gap-8 md:gap-12  items-center  scroll-mt-20"
     >
       <div className="flex flex-col gap-4">
         <motion.h3

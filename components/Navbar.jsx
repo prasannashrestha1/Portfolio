@@ -13,7 +13,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   };
   return (
     <>
-      <nav className=" w-full flex fixed px-5 lg:px-8 xl:px-[8%] py-4 justify-between bg-white dark:bg-darkTheme dark:shadow-white/20 items-center z-9999">
+      <nav className="w-screen flex fixed px-5 lg:px-8 xl:px-[8%] py-4 justify-between border-b dark:border-[#3D3D3D] bg-white dark:bg-darkTheme dark:shadow-white/20 items-center z-9999">
         <a href="#top" className="flex items-end gap-2">
           <h1 className="text-2xl">Prasanna</h1>
           <div className="w-2 h-2 mb-3 bg-red-500 rounded-full"></div>

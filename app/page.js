@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Services from "@/components/Services";
 import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
+export const runtime = "edge";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -35,15 +36,17 @@ export default function Home() {
   }, [isDarkMode]);
 
   return (
-    <div className="w-full mx-auto  gap-10">
+    <div className="">
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <Headers isDarkMode={isDarkMode} />
-      <About isDarkMode={isDarkMode} />
-      <Services isDarkMode={isDarkMode} />
-      <Mywork isDarkMode={isDarkMode} />
-      <Contact isDarkMode={isDarkMode} />
+      <div className="h-screen md:overflow-y-scroll md:snap-y md:snap-mandatory z-3">
+        <Headers isDarkMode={isDarkMode} />
+        <About isDarkMode={isDarkMode} />
+        <Services isDarkMode={isDarkMode} />
+        <Mywork isDarkMode={isDarkMode} />
+        <Contact isDarkMode={isDarkMode} />
+        <ToastContainer isDarkMode={isDarkMode} />
+      </div>
       <Footer isDarkMode={isDarkMode} />
-      <ToastContainer isDarkMode={isDarkMode} />
     </div>
   );
 }

@@ -7,7 +7,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="w-full min-h-screen text-center flex flex-col px-5 lg:px-8 xl:px-[8%] py-[20px] sm:py-[40px] md:py-[80px] gap-8 md:gap-12 items-center justc z-50 scroll-mt-20"
+      className="snap-start w-full min-h-screen text-center flex flex-col px-5 lg:px-8 xl:px-[8%] py-[20px] sm:py-[40px] md:py-[80px] gap-8 md:gap-12 items-center justc z-50 scroll-mt-20"
     >
       <motion.div
         initial={{ opacity: 0 }}

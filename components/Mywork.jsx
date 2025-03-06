@@ -7,7 +7,7 @@ const Mywork = ({ isDarkMode }) => {
   return (
     <section
       id="work"
-      className="w-full min-h-screen text-center flex flex-col px-5 lg:px-8 xl:px-[8%] py-[20px] sm:py-[40px] md:py-[80px] gap-8 md:gap-12  items-center z-50 scroll-mt-20"
+      className="snap-start w-full min-h-screen dark:bg-[#1B1B1B] text-center flex flex-col px-5 lg:px-8 xl:px-[8%] py-[20px] sm:py-[40px] md:py-[80px] gap-8 md:gap-12  items-center z-50 scroll-mt-20"
     >
       <motion.div
         initial={{ opacity: 0 }}
@@ -88,7 +88,7 @@ const Mywork = ({ isDarkMode }) => {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.5 }}
       >
-        <button className="px-8 py-2 rounded-full dark:text-white/80 text-gray-700 border border-slate-500 hover:bg-lightHover hover:scale-105 duration-500">
+        <button className="px-8 py-2 rounded-full dark:text-white/80 text-gray-700 border border-slate-500 hover:bg-lightHover dark:hover:bg-darkHover/60 hover:scale-105 duration-500">
           Show More
         </button>
       </motion.div>
