@@ -1,19 +1,23 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
+import { motion } from "motion/react";
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState();
   const sideMenuRef = useRef();
 
   const openMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(-16rem)";
+    // sideMenuRef.current.style.transform = "translateX(-16rem)";
+    setIsSidebarOpen(!isSidebarOpen);
   };
   const closeMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(16rem)";
+    // sideMenuRef.current.style.transform = "translateX(16rem)";
+    setIsSidebarOpen(!isSidebarOpen);
   };
   return (
     <>
-      <nav className="w-screen flex fixed px-5 lg:px-8 xl:px-[8%] py-4 justify-between border-b dark:border-[#3D3D3D] bg-white dark:bg-darkTheme dark:shadow-white/20 items-center z-9999">
+      <nav className="w-screen flex top-0 px-5 lg:px-8 xl:px-[8%] py-4 justify-between border-b dark:border-[#3D3D3D] bg-white dark:bg-darkTheme dark:shadow-white/20 items-center z-9999">
         <a href="#top" className="flex items-end gap-2">
           <h1 className="text-2xl">Prasanna</h1>
           <div className="w-2 h-2 mb-3 bg-red-500 rounded-full"></div>
@@ -79,7 +83,9 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         {/* mobile menu */}
         <ul
           ref={sideMenuRef}
-          className=" fixed text-xl top-0 z-999 -right-64 gap-6 bg-red-300 dark:bg-darkHover z-200 h-screen flex flex-col shadow-md w-64 transition duration-500 md:hidden px-12 py-12"
+          className={` ${
+            isSidebarOpen ? "flex" : " hidden"
+          } fixed text-xl top-0 z-999 right-0 gap-6 bg-red-300 dark:bg-darkHover z-200 h-full  flex-col shadow-md w-screen transition duration-500 md:hidden px-12 py-12`}
         >
           <div
             onClick={closeMenu}

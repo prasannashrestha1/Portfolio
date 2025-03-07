@@ -114,6 +114,7 @@ const Contact = ({ isDarkMode }) => {
           <FaArrowRight />
         </button>
       </motion.form>
+      <Footer isDarkMode={isDarkMode} />
     </motion.section>
   );
 };

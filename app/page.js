@@ -37,9 +37,10 @@ export default function Home() {
   }, [isDarkMode]);
 
   return (
-    <div className="">
+    <div className="flex flex-col ">
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <div className="h-screen md:overflow-y-scroll md:snap-y md:snap-mandatory z-3">
+
+      <div className=" max-h-[95vh] snap-y overflow-y-auto  z-3">
         <Headers isDarkMode={isDarkMode} />
         <About isDarkMode={isDarkMode} />
         <Services isDarkMode={isDarkMode} />
@@ -47,7 +48,6 @@ export default function Home() {
         <Contact isDarkMode={isDarkMode} />
         <ToastContainer isDarkMode={isDarkMode} />
       </div>
-      <Footer isDarkMode={isDarkMode} />
     </div>
   );
 }
