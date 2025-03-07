@@ -2,14 +2,18 @@ import React from "react";
 import { IoMailOutline } from "react-icons/io5";
 import { FaFacebookF } from "react-icons/fa";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
+import { motion } from "motion/react";
 
 const Footer = () => {
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
       id="services"
       className="w-full text-center flex flex-col px-5 lg:px-8 xl:px-[8%] py-[20px]  gap-6 md:gap-8 justify-center items-center z-50 scroll-mt-20"
     >
-      <div className="w-full flex flex-col gap-2 items-center ">
+      <motion.div className="w-full flex flex-col gap-2 items-center ">
         <a href="#top" className="flex items-end gap-2">
           <h1 className="text-3xl text-center">Prasanna</h1>
           <div className="w-2 h-2 mb-3 bg-red-500 rounded-full"></div>
@@ -20,7 +24,7 @@ const Footer = () => {
             shresthaprasanna230@gmail.com
           </p>
         </div>
-      </div>
+      </motion.div>
       <div className="flex flex-col pt-5 border-t w-full items-end justify-between gap-4">
         <div className="w-full flex items-center justify-between gap-4">
           {" "}
@@ -70,7 +74,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
