@@ -37,6 +37,8 @@ import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 import prasanna from "./prasanna.png";
 import Prasanna_cover from "./Prasanna-cover.png";
+import bubble from "./bubble.png";
+import bubble_id from "./bubble-id.png";
 
 export const assets = {
   user_image,
@@ -48,6 +50,8 @@ export const assets = {
   project_icon_dark,
   vscode,
   firebase,
+  bubble,
+  bubble_id,
   figma,
   git,
   mongodb,
@@ -82,24 +86,28 @@ export const assets = {
 
 export const workData = [
   {
-    title: "Frontend project",
-    description: "Web Design",
+    title: "Doc Appointment (Mern)",
+    description: "Doctor Appointment using mern stack",
     bgImage: "/work-1.png",
+    link: "",
   },
   {
-    title: "Geo based app",
-    description: "Mobile App",
+    title: "Clockitup (Bubble App)",
+    description: "Time Tracking App",
     bgImage: "/work-2.png",
+    link: "https://app.clockitup.io/",
   },
   {
-    title: "Photography site",
-    description: "Web Design",
+    title: "FootyGPT (Bubble)",
+    description: "AI Service using GPT-4o",
     bgImage: "/work-3.png",
+    link: "https://footygpt.com/?nav=Home",
   },
   {
     title: "UI/UX designing",
     description: "UI/UX Design",
     bgImage: "/work-4.png",
+    link: "",
   },
 ];
 
@@ -111,10 +119,10 @@ export const serviceData = [
     link: "",
   },
   {
-    icon: assets.mobile_icon,
-    title: "Mobile app",
+    icon: assets.bubble_id,
+    title: "Bubble Development",
     description:
-      "Mobile app development involves creating software for mobile devices...",
+      "Experienced bubble developer with 1 year experience on building bubble apps...",
     link: "",
   },
   {
@@ -137,7 +145,8 @@ export const infoList = [
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
     title: "Languages",
-    description: "HTML, CSS, JavaScript React Js, Express Js",
+    description:
+      "HTML, CSS, JavaScript React Js, Express Js, Bubble.io(low-code)",
   },
   {
     icon: assets.edu_icon,
@@ -149,7 +158,7 @@ export const infoList = [
     icon: assets.project_icon,
     iconDark: assets.project_icon_dark,
     title: "Projects",
-    description: "Built more than 3 projects",
+    description: "Built more than 3 projects, (project links comming soon)",
   },
 ];
 
@@ -159,4 +168,5 @@ export const toolsData = [
   assets.mongodb,
   assets.figma,
   assets.git,
+  assets.bubble,
 ];

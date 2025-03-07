@@ -4,6 +4,10 @@ import React from "react";
 import { motion } from "motion/react";
 
 const Mywork = ({ isDarkMode }) => {
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+    if (newWindow) newWindow.opener = null;
+  };
   return (
     <section
       id="work"
@@ -41,7 +45,7 @@ const Mywork = ({ isDarkMode }) => {
           className=" text-md lg:text-lg "
         >
           Welcome to my web development portfolio! Explore a collection of
-          projects showcasing my expertise in front-end development
+          projects we built showcasing my expertise in front-end development.
         </motion.h3>
       </motion.div>
       <motion.div
@@ -63,7 +67,12 @@ const Mywork = ({ isDarkMode }) => {
             }}
             className="flex flex-col group m-2 border rounded-xl gap-3 text-start p-6 md:p-8 text-slate-500 border-slate-400 shadow-lg hover:shadow-2xl"
           >
-            <div className="flex grow justify-between mt-28 bg-white p-4 gap-2 rounded-xl group-hover:-translate-x-1.5 transition-all ease-in-out duration-500 ">
+            <div
+              onClick={() => openInNewTab(`${item.link}`)}
+              className={`flex grow justify-between mt-28 ${
+                item.link && "cursor-pointer"
+              }  bg-white p-4 gap-2 rounded-xl group-hover:-translate-x-1.5 transition-all ease-in-out duration-500`}
+            >
               <div>
                 <h4 className="text-md leading-[10px] md:text-lg  text-black">
                   {item.title}

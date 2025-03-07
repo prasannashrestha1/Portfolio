@@ -4,6 +4,10 @@ import React from "react";
 import { motion } from "motion/react";
 
 const Headers = () => {
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+    if (newWindow) newWindow.opener = null;
+  };
   return (
     <section className="snap-start w-full text-center flex flex-col h-screen px-5 lg:px-8 xl:px-[8%] py-4 gap-6 md:gap-7s justify-center items-center z-50">
       <div className="flex flex-col items-center gap-4">
@@ -57,16 +61,19 @@ const Headers = () => {
         className="min-[475px]:flex-row flex-col max-[475px]:w-full flex gap-3"
       >
         <a
-          href="/sample-resume.pdf"
-          download
-          className="px-10 py-3 border hover:shadow-md hover:-translate-x-1.5 transition-all ease-in-out duration-500 border-white hover:bg-darkHover rounded-full bg-black text-white flex items-center justify-center gap-2"
+          onClick={() =>
+            openInNewTab(
+              "https://www.linkedin.com/in/prasanna-shrestha-7673261a0/"
+            )
+          }
+          className="px-10 py-3 border cursor-pointer hover:shadow-md hover:-translate-x-1.5 transition-all ease-in-out duration-500 border-white hover:bg-darkHover rounded-full bg-black text-white flex items-center justify-center gap-2"
         >
           {" "}
           Connect with me
           <Image src={assets.right_arrow_white} className="w-4 " alt="" />
         </a>
         <a
-          href="/sample-resume.pdf"
+          href="/prasanna-cv.pdf"
           download
           className="px-10 hover:shadow-md py-3 border hover:translate-x-1.5 transition-all ease-in-out duration-500 border-black hover:bg-lightHover rounded-full bg-white text-black flex items-center justify-center gap-2"
         >
