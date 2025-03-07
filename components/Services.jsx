@@ -57,7 +57,7 @@ const Services = () => {
             whileHover={{ scale: 1.01 }}
             href=""
             key={index}
-            className="flex flex-col m-2 border rounded-xl gap-3  p-6 md:p-8 text-slate-500 border-slate-400 shadow-lg hover:shadow-black dark:hover:shadow-white hover:bg-lightHover dark:hover:bg-darkHover/80 hover:-translate-y-1.5 transition-all ease-in-out duration-500 "
+            className="flex bg-blue-100/10 dark:bg-blue-700/10 flex-col m-2 border rounded-xl gap-3  p-6 md:p-8 text-slate-500 border-slate-400 shadow-lg hover:shadow-black dark:hover:shadow-white hover:bg-lightHover dark:hover:bg-darkHover/80 hover:-translate-y-1.5 transition-all ease-in-out duration-500 "
           >
             <Image src={item.icon} alt="" className="w-7 h-7" />
             <h4 className="text-lg md:text-xl dark:text-white text-black">

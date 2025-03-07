@@ -39,6 +39,7 @@ import prasanna from "./prasanna.png";
 import Prasanna_cover from "./Prasanna-cover.png";
 import bubble from "./bubble.png";
 import bubble_id from "./bubble-id.png";
+import backend from "./backend.png";
 
 export const assets = {
   user_image,
@@ -54,6 +55,7 @@ export const assets = {
   bubble_id,
   figma,
   git,
+  backend,
   mongodb,
   right_arrow_white,
   logo,
@@ -114,8 +116,9 @@ export const workData = [
 export const serviceData = [
   {
     icon: assets.web_icon,
-    title: "Web design",
-    description: "Web development is the process of building, programming...",
+    title: "Front End Development",
+    description:
+      "I design and develop modern, responsive, and high-performing websites, ensuring seamless user experiences and clean, intuitive interfaces.",
     link: "",
   },
   {
@@ -129,13 +132,14 @@ export const serviceData = [
     icon: assets.ui_icon,
     title: "UI/UX design",
     description:
-      "UI/UX design focuses on creating a seamless user experience...",
+      "I create engaging and intuitive designs that enhance user interaction, ensuring a smooth and seamless digital experience for web and mobile applications. (No Proper Exericence)",
     link: "",
   },
   {
-    icon: assets.graphics_icon,
-    title: "Graphics design",
-    description: "Creative design solutions to enhance visual communication...",
+    icon: assets.backend,
+    title: "Backend Development",
+    description:
+      "From API development to database management, I ensure smooth data flow, authentication, and seamless integration with front-end interfaces.",
     link: "",
   },
 ];
