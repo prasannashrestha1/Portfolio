@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Services from "@/components/Services";
 import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
+
 export const runtime = "edge";
 
 export default function Home() {
