@@ -37,7 +37,7 @@ const Contact = ({ isDarkMode }) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="contact"
-      className=" snap-start w-full min-h-screen text-center flex flex-col px-5 lg:px-8 xl:px-[8%] py-[20px] sm:py-[40px] md:py-[80px] gap-8 md:gap-12 items-center bg-[url(/footer-bg-color.png)] dark:bg-none bg-no-repeat bg-center z-10 scroll-mt-20"
+      className="snap-start w-full min-h-screen text-center flex flex-col px-5 lg:px-8 xl:px-[8%] py-[20px] sm:py-[40px] md:py-[80px] gap-8 md:gap-12 items-center bg-[url(/footer-bg-color.png)] dark:bg-none bg-no-repeat bg-center z-10 scroll-mt-20"
     >
       <div className="flex flex-col gap-8 flex-1 max-w-[800px]">
         <div className="flex flex-col gap-4">
@@ -74,10 +74,10 @@ const Contact = ({ isDarkMode }) => {
         onSubmit={onSubmit}
         className="flex flex-col gap-8 max-w-[800px] w-full items-center"
       >
-        <div className="flex w-full flex-1 gap-4">
+        <div className="flex w-full flex-col sm:flex-row flex-1 gap-4">
           <motion.input
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, delay: 0.6 }}
             type="text"
             className="border-2 grow h-[48px] dark:bg-darkHover/30 dark:border-white/20 rounded-xl outline-none p-4 hover:border-blue-400 focus:border-blue-400"
@@ -86,10 +86,10 @@ const Contact = ({ isDarkMode }) => {
             required
           />
           <motion.input
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, delay: 0.6 }}
-            className="border-2 grow h-[48px] dark:bg-darkHover/30 dark:border-white/20 rounded-xl outline-none p-4 hover:border-blue-400 focus:border-blue-400"
+            className="border-2 grow  h-[48px] dark:bg-darkHover/30 dark:border-white/20 rounded-xl outline-none p-4 hover:border-blue-400 focus:border-blue-400"
             type="email"
             placeholder="Enter your email"
             name="email"

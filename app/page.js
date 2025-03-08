@@ -37,10 +37,10 @@ export default function Home() {
   }, [isDarkMode]);
 
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col w-screen">
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
 
-      <div className=" max-h-[90vh] snap-y overflow-y-auto  z-3">
+      <div className=" max-h-[90vh] snap-y overflow-y-auto grow z-3">
         <Headers isDarkMode={isDarkMode} />
         <About isDarkMode={isDarkMode} />
         <Services isDarkMode={isDarkMode} />
