@@ -12,7 +12,7 @@ const About = ({ isDarkMode }) => {
       id="about"
       className="snap-start w-full min-h-screen text-center dark:bg-[#1B1B1B] flex flex-col px-5 lg:px-8 xl:px-[8%] py-[20px] sm:py-[40px] md:py-[80px] gap-8 md:gap-12  items-center  scroll-mt-20"
     >
-      <div className="flex flex-col gap-4">
+      <div className="flex w-full flex-col gap-4">
         <motion.h3
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -34,30 +34,30 @@ const About = ({ isDarkMode }) => {
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
-        className="flex flex-col lg:flex-row gap-6 md:gap-8"
+        className="flex flex-col w-full lg:flex-row gap-6 md:gap-8"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="w-full  lg:hidden flex items-center justify-center"
+          className="min-w-0 max-w-[200px] h-[200px] lg:hidden flex items-center justify-center"
         >
           <Image
             src={assets.Prasanna_cover}
-            className="max-w-[400px] object-cover rounded-xl shadow-xl lg:border-2 border-slate-500"
+            className="min-w-0  object-cover rounded-xl shadow-xl lg:border-2 border-slate-500"
             alt=""
           />
         </motion.div>
         <Image
           src={assets.Prasanna_cover}
           alt=""
-          className="max-w-[400px] object-cover lg:rounded-full hidden lg:block shadow-xl lg:border-2 border-slate-500"
+          className="min-w-0 max-w-[400px] object-cover lg:rounded-full hidden lg:block shadow-xl lg:border-2 border-slate-500"
         />
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="flex flex-col gap-6 lg:w-full md:gap-8 max-w-[800px]"
+          className="flex flex-col gap-6 lg:w-full md:gap-8 md:max-w-[800px]"
         >
           <p>
             I am an experienced Bubble Developer with a year of expertise,
@@ -69,7 +69,7 @@ const About = ({ isDarkMode }) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="grid grid-cols-1 gap-2 md:gap-0 sm:grid-cols-3 max-w-[740px]"
+            className="grid grid-cols-1 gap-2 md:gap-0 sm:grid-cols-3 md:max-w-[740px]"
           >
             {infoList.map((item, index) => (
               <motion.div
