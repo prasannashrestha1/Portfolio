@@ -106,8 +106,8 @@ export const workData = [
     link: "https://footygpt.com/?nav=Home",
   },
   {
-    title: "UI/UX designing",
-    description: "UI/UX Design",
+    title: "Ecommerce",
+    description: "Ecommerce using mern stack(on progress)",
     bgImage: "/work-4.png",
     link: "",
   },

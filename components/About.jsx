@@ -40,11 +40,11 @@ const About = ({ isDarkMode }) => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="min-w-0 max-w-[200px] h-[200px] lg:hidden flex items-center justify-center"
+          className="w-full  flex justify-center items-center lg:hidden "
         >
           <Image
             src={assets.Prasanna_cover}
-            className="min-w-0  object-cover rounded-xl shadow-xl lg:border-2 border-slate-500"
+            className="min-w-0 max-w-[400px] object-cover rounded-xl shadow-xl lg:border-2 border-slate-500"
             alt=""
           />
         </motion.div>
@@ -57,7 +57,7 @@ const About = ({ isDarkMode }) => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="flex flex-col gap-6 lg:w-full md:gap-8 md:max-w-[800px]"
+          className="flex flex-col gap-6 w-full md:gap-8 lg:max-w-[800px]"
         >
           <p>
             I am an experienced Bubble Developer with a year of expertise,
@@ -104,7 +104,7 @@ const About = ({ isDarkMode }) => {
               {toolsData.map((item, index) => (
                 <div
                   key={index}
-                  className="border p-3 hover:bg-lightHover dark:hover:bg-darkHover/80 hover:-translate-y-1 transition-all ease-in-out duration-300 shadow-lg rounded-lg w-fit h-fit border-slate-300"
+                  className="border p-2 sm:p-3 hover:bg-lightHover dark:hover:bg-darkHover/80 hover:-translate-y-1 transition-all ease-in-out duration-300 shadow-lg rounded-lg w-fit h-fit border-slate-300"
                 >
                   <Image src={item} alt="" className="w-[35px]" />
                 </div>
