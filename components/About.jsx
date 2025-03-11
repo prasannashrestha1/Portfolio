@@ -34,13 +34,13 @@ const About = ({ isDarkMode }) => {
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
-        className="flex flex-col w-full lg:flex-row gap-6 md:gap-8"
+        className="flex flex-col items-center justify-center w-full lg:flex-row gap-6 md:gap-8"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="w-full  flex justify-center items-center lg:hidden "
+          className="w-full flex justify-center items-center lg:hidden "
         >
           <Image
             src={assets.Prasanna_cover}
@@ -51,13 +51,13 @@ const About = ({ isDarkMode }) => {
         <Image
           src={assets.Prasanna_cover}
           alt=""
-          className="min-w-0 max-w-[400px] object-cover lg:rounded-full hidden lg:block shadow-xl lg:border-2 border-slate-500"
+          className="min-w-0 max-w-[400px] object-cover rounded-[50px] hidden lg:block drop-shadow-2xl lg:border-2 border-slate-500"
         />
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="flex flex-col gap-6 w-full md:gap-8 lg:max-w-[800px]"
+          className="flex flex-col gap-6 iw-full md:gap-8 lg:max-w-[800px]"
         >
           <p>
             I am an experienced Bubble Developer with a year of expertise,
@@ -69,7 +69,7 @@ const About = ({ isDarkMode }) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="grid grid-cols-1 gap-2 md:gap-0 sm:grid-cols-3 md:max-w-[740px]"
+            className="grid grid-cols-1 gap-2 md:gap-0 sm:grid-cols-3 "
           >
             {infoList.map((item, index) => (
               <motion.div
