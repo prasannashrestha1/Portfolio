@@ -74,7 +74,7 @@ const Mywork = ({ isDarkMode }) => {
               }  bg-white p-4 gap-2 rounded-xl group-hover:-translate-x-1.5 transition-all ease-in-out duration-500`}
             >
               <div>
-                <h4 className="text-md leading-[10px] md:text-lg  text-black">
+                <h4 className="text-md leading-2 md:text-lg text-wrap  text-black">
                   {item.title}
                 </h4>
                 <p className="mt-1 text-sm md:text-[15px] leading-5">
