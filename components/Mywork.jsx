@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 
 const Mywork = ({ isDarkMode }) => {
-  const [category, setCategory] = useState();
+  const [category, setCategory] = useState("All Works");
   const [uniqueWorkData, setUniqueWorkData] = useState([]);
   const openInNewTab = (url) => {
     const newWindow = window.open(url, "_blank", "noopener,noreferrer");
@@ -17,17 +17,19 @@ const Mywork = ({ isDarkMode }) => {
 
     workData.forEach((item) => {
       if (!categories.has(item.category)) {
-        filtered.push(item);
+        filtered.push(item.category);
         categories.add(item.category);
       }
     });
 
+    filtered.unshift("All Works");
     setUniqueWorkData(filtered);
   }, []);
 
-  const dataToDisplay = category
-    ? workData.filter((item) => item.category === category)
-    : workData;
+  const dataToDisplay =
+    category && category !== "All Works"
+      ? workData.filter((item) => item.category === category)
+      : workData;
 
   const updateCategory = (text) => {
     setCategory(text);
@@ -75,13 +77,13 @@ const Mywork = ({ isDarkMode }) => {
       <motion.div className="flex justify-start max-w-[1280px] gap-2">
         {uniqueWorkData.map((item, index) => (
           <div
-            onClick={() => updateCategory(item.category)}
+            onClick={() => updateCategory(item)}
             key={index}
             className={`rounded-full border border-purple-500 bg-purple-100 py-1 px-4 font-medium text-purple-800 cursor-pointer ${
-              item.category === category && "bg-purple-800 text-white"
+              item === category && "bg-purple-800 text-white"
             }`}
           >
-            {item.category}
+            {item}
           </div>
         ))}
       </motion.div>
