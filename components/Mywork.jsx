@@ -1,12 +1,36 @@
 import { assets, workData } from "@/assets/assets";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 
 const Mywork = ({ isDarkMode }) => {
+  const [category, setCategory] = useState();
+  const [uniqueWorkData, setUniqueWorkData] = useState([]);
   const openInNewTab = (url) => {
     const newWindow = window.open(url, "_blank", "noopener,noreferrer");
     if (newWindow) newWindow.opener = null;
+  };
+
+  useEffect(() => {
+    const categories = new Set();
+    const filtered = [];
+
+    workData.forEach((item) => {
+      if (!categories.has(item.category)) {
+        filtered.push(item);
+        categories.add(item.category);
+      }
+    });
+
+    setUniqueWorkData(filtered);
+  }, []);
+
+  const dataToDisplay = category
+    ? workData.filter((item) => item.category === category)
+    : workData;
+
+  const updateCategory = (text) => {
+    setCategory(text);
   };
   return (
     <section
@@ -48,13 +72,26 @@ const Mywork = ({ isDarkMode }) => {
           projects we built showcasing my expertise in front-end development.
         </motion.h3>
       </motion.div>
+      <motion.div className="flex justify-start max-w-[1280px] gap-2">
+        {uniqueWorkData.map((item, index) => (
+          <div
+            onClick={() => updateCategory(item.category)}
+            key={index}
+            className={`rounded-full border border-purple-500 bg-purple-100 py-1 px-4 font-medium text-purple-800 cursor-pointer ${
+              item.category === category && "bg-purple-800 text-white"
+            }`}
+          >
+            {item.category}
+          </div>
+        ))}
+      </motion.div>
       <motion.div
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.9, duration: 0.6 }}
         className="grid w-full grid-cols-1 md:grid-cols-2  xl:grid-cols-4 max-w-7xl "
       >
-        {workData.map((item, index) => (
+        {dataToDisplay.map((item, index) => (
           <motion.div
             whileHover={{ scale: 1.01 }}
             transition={{ duration: 0.3 }}
@@ -97,9 +134,9 @@ const Mywork = ({ isDarkMode }) => {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.5 }}
       >
-        <button className="px-8 py-2 rounded-full dark:text-white/80 text-gray-700 border border-slate-500 hover:bg-lightHover dark:hover:bg-darkHover/60 hover:scale-105 duration-500">
+        {/* <button className="px-8 py-2 rounded-full dark:text-white/80 text-gray-700 border border-slate-500 hover:bg-lightHover dark:hover:bg-darkHover/60 hover:scale-105 duration-500">
           Show More
-        </button>
+        </button> */}
       </motion.div>
     </section>
   );

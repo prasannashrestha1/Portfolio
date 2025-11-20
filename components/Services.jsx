@@ -1,9 +1,11 @@
 import { assets, serviceData } from "@/assets/assets";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 
 const Services = () => {
+  const [state, setState] = useState(0);
+  useEffect;
   return (
     <section
       id="services"

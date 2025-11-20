@@ -41,7 +41,7 @@ const Headers = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className=" text-4xl  lg:text-5xl"
         >
-          Bubble Developer & Aspiring Mern Stack Developer{" "}
+          Full Stack Bubble Developer & Aspiring Mern Stack Developer{" "}
         </motion.h1>
         <motion.h3
           initial={{ opacity: 0 }}
@@ -73,7 +73,7 @@ const Headers = () => {
           <Image src={assets.right_arrow_white} className="w-4 " alt="" />
         </a>
         <a
-          href="/prasanna-cv.pdf"
+          href="/Prasanna-Shrestha-CV.pdf"
           download
           className="px-10 hover:shadow-md py-3 border hover:translate-x-1.5 transition-all ease-in-out duration-500 border-black hover:bg-lightHover rounded-full bg-white text-black flex items-center justify-center gap-2"
         >

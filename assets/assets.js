@@ -92,24 +92,42 @@ export const workData = [
     description: "Doctor Appointment using mern stack",
     bgImage: "/work-1.png",
     link: "https://mern-doctor-appointment-frontend-xvl4.onrender.com/",
+    category: "MERN",
   },
   {
     title: "Clockitup (Bubble App)",
     description: "Time Tracking App",
-    bgImage: "/work-2.png",
+    bgImage: "/clockitup.png",
     link: "https://app.clockitup.io/",
+    category: "Bubble",
   },
   {
     title: "FootyGPT (Bubble)",
     description: "AI Service using GPT-4o",
     bgImage: "/work-3.png",
     link: "https://footygpt.com/?nav=Home",
+    category: "Bubble",
+  },
+  {
+    title: "ChatGPT Clone",
+    description: "ChatGPT Clone using Bubble.io",
+    bgImage: "/work-4.png",
+    link: "https://openaichatgpt-clone.bubbleapps.io/version-test/app",
+    category: "Bubble",
+  },
+  {
+    title: "Calsets",
+    description: "An Appointment Booker App",
+    bgImage: "/Calsets.png",
+    link: "https://app.bookslot.io/version-test/login_signup",
+    category: "Bubble",
   },
   {
     title: "Ecommerce",
     description: "Ecommerce using mern stack(on progress)",
     bgImage: "/work-4.png",
     link: "https://ecommerce-with-mern-phi.vercel.app/",
+    category: "MERN",
   },
 ];
 
